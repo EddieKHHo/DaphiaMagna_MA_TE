@@ -1,5 +1,3 @@
-# Description and usage of simMutAccumTE.py
-
 ## Description
 This program was used by ABC (Ho et al. 2020) to estimate the false positive and false negative rates of detecting tranposable element mutations when using TEFLoN (Adrion et al. 2017).
 This program is a modified version of 'simpoolTE' from Adrion et al. (2018).
