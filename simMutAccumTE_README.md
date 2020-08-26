@@ -34,11 +34,14 @@ usage: simMutAccumTE.py <required> [optional]
 
 SimMutAccumTE inserts or delete TEs from the TE annotation file (<em>b</em>) onto the genome fasta file (<em>c</em>).
 
-First, pIRS (Hu et al. 2012) is used to generate a diploid ancestor (ANC) genome by duplicated the given genome fasta file and adding SNPs at a specified rate (<em>snp</em>); the fasta files of ANC is stored in /pirsAnc. pIRS requires that fasta file does not contain N's. 
+First, pIRS (Hu et al. 2012) is used to generate a diploid ancestor (ANC) genome by duplicated the given genome fasta file and adding SNPs at a specified rate (<em>snp</em>); the fasta files of each homolog of ANC is stored in pirsAnc/ as ANC.H1.snp.fa and ANC.H2.snp.fa with the list of simualted SNPS recored in ANC.H1.snp.lst and ANC.H2.snp.lst.
+pIRS requires that fasta file does not contain N's. 
 
 Subsequently <em>nmut</em> TE mutations of a specified type (<em>tmut</em>) are simulated. Type 1 are novel TE insertions (0->1 gain), simulated by insertion a heterozygous TE (i.e., on one homolog of the genome) into the MA line. Type 2 are TE deletion from an ancestrally homozygous TE site (2->1 loss), simulated by inserting a homozygous TE (i.e. insertion of both homologs) on ANC and a heterozygous TE on the MA line. Type 3 are TE insertion onto an ancestrally heterozygous TE site (1->2 gain), simualted by inserting a heterozygous TE on the ANC and then a homozygous TE on the MA line. Type 4 are TE deletions from an ancestrally heterozygous TE site (1->0 loss), simualted by inserting a heterozygous TE on the ANC only. In addition a <em>nhet</em> number of shared TE heterozygous sites can be added onto both ANC and MA lines. 
 
-Each TE insertion was chosen randomly from the annotation file and has a minimum and maximum length given by <em>mnlen</em> and <em>mxlen</em>, respectively. Insertions of TEs are separated by at least one read length (<em>rlen</em>) and flanked by a target site duplication with a mean length of 5 bp drawn from a Poisson distribution.
+Each TE insertion was chosen randomly from the annotation file and has a minimum and maximum length given by <em>mnlen</em> and <em>mxlen</em>, respectively. Insertions of TEs are separated by at least one read length (<em>rlen</em>) and flanked by a target site duplication with a mean length of 5 bp drawn from a Poisson distribution. Fasta files of the homologs containing the simulated mutations for ANC and MA are stored in simTE/ as ANC.H1.simTE.fa,  ANC.H2.simTE.fa,  MA.H1.simTE.fa and  MA.H2.simTE.fa
+
+After all mutations have been simulated, pIRS (Hu et al. 2012) is used to generate paired-end reads with read length <em>rlen</em> and insert size <em>insz</em> at a diploid coverage of <em>x</em>. Reads for the ancestral and <em>ncl</em> non-focal descendent lines are simulated using ANC.H1.simTE.fa and ANC.H2.simTE.fa while those for the focal MA line are simulated from MA.H1.simTE.fa and MA.H2.simTE.fa. Reads for all lines are stored as fastq format in pirsReads/.
 
 
 
