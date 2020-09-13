@@ -5,3 +5,6 @@ Bash and Python code used to run TEFLoN (Adrion et al. 2017) on starting control
 
 ## TE_TIPS_Analysis.py
 Bash and Python code used to run TEFLoN (Adrion et al. 2017) on starting control (SC) lines and filter for TE insertion site polymorphisms.
+
+## simMutAccumTE.py
+Python script used to simulate a MA experiment with TE mutations. Read simMutAccumTE_README.md for further details.
