@@ -1,7 +1,7 @@
 # *simMutAccumTE*
 
 ## Description
-This program is a modified version of 'simpoolTE' from Adrion et al. (2019) and used by MS_TITLE (Ho et al. 2020) to estimate the false positive and false negative rates of detecting tranposable element mutations when using TEFLoN (Adrion et al. 2017).
+This program is a modified version of 'simpoolTE' from Adrion et al. (2019) and used by Variation in transposable element activity over spatial and temporal scales (Ho et al. 2020, In review) to estimate the false positive and false negative rates of detecting tranposable element mutations when using TEFLoN (Adrion et al. 2017).
 SimMutAccumTE simulates a mutation accumulation (MA) experiment by inserting and/or deleting a number of transposable elements (TEs) into a diploid genome of a focal MA line while leaving the ancestral (ANC) genomes intact. After mutations are simulated in the given genome, pIRS (Hu et al. 2012) is used to generate paired-end reads for all lines.
 
 ## Requirements
