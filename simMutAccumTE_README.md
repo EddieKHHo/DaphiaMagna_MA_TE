@@ -45,7 +45,7 @@ After all mutations have been simulated, pIRS (Hu et al. 2012) is used to genera
 ## References
 - Adrion JR, Song MH, Schrider DR, Hahn MW, Schaack S. Genome-wide estimates of transposable element insertion and deletion rates in Drosophila melanogaster. Genome Biol Evol. 2017;9(5):1329-40.
 - Adrion, JR, Begun, DJ, Hahn MW. Patterns of transposable element variation and clinality in Drosophila. Mol Biol. 2019;28:1523-36.
-- Xuesong H, Yuan J, Shi Y, Lu J, Liu B, Li Z, Chen Y, Mu D, Zhang H, Yue Z, Bai F, Li H, Fan W. pIRS: Profile-based illumine pair-end reads simulator. Bioinformatics. 2012;28(11):1533-35.
+- Hu X, Yuan J, Shi Y, Lu J, Liu B, Li Z, Chen Y, Mu D, Zhang H, Yue Z, Bai F, Li H, Fan W. pIRS: Profile-based illumine pair-end reads simulator. Bioinformatics. 2012;28(11):1533-35.
 
 ## Citation
 If you used simMutAccumTE in you work, please cite:
